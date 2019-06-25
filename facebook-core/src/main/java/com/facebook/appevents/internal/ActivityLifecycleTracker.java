@@ -174,7 +174,8 @@ public class ActivityLifecycleTracker {
         final long currentTime = System.currentTimeMillis();
         ActivityLifecycleTracker.currentActivityAppearTime = currentTime;
         final String activityName = Utility.getActivityName(activity);
-        codelessMatcher.add(activity);
+        //DISABLED FOR SCROLL PERFORMANCE ISSUES
+        //codelessMatcher.add(activity);
         Runnable handleActivityResume = new Runnable() {
             @Override
             public void run() {
@@ -270,7 +271,8 @@ public class ActivityLifecycleTracker {
         final long currentTime = System.currentTimeMillis();
 
         final String activityName = Utility.getActivityName(activity);
-        codelessMatcher.remove(activity);
+        //DISABLED FOR SCROLL PERFORMANCE ISSUES
+//        codelessMatcher.remove(activity);
         Runnable handleActivityPaused = new Runnable() {
             @Override
             public void run() {
